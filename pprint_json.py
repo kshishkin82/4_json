@@ -5,9 +5,8 @@ import json
 
 def load_data(filepath):
     with open(filepath, 'r') as f:
-        # print (f.read())
-        data = json.loads(f.read())
-    return data
+        jsondata = json.loads(f.read())
+    return jsondata
 
 def pretty_print_json(data):
     print (json.dumps(data, sort_keys=True, indent=4, separators=(',', ': ')))
@@ -24,6 +23,6 @@ if __name__ == '__main__':
         print ("Файл не найден")
         sys.exit()
         
-    data = load_data(f)
-    pretty_print_json(data)
+    jsondata = load_data(f)
+    pretty_print_json(jsondata)
     
